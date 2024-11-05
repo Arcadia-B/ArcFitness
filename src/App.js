@@ -1,6 +1,7 @@
 import './App.css';
 import Exercises from './Components/Exercises/Exercises';
 import Hero from './Components/Hero/Hero';
+import HeroBanner from './Components/HeroBanner/HeroBanner';
 import Navbar from './Components/Navbar/Navbar';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <Navbar/>
     <Hero/>
     <Exercises/>
+    <HeroBanner/>
     </div>
   );
 }
