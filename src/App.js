@@ -1,4 +1,5 @@
 import './App.css';
+import BodyMass from './Components/BodyMass/BodyMass';
 import Exercises from './Components/Exercises/Exercises';
 import Hero from './Components/Hero/Hero';
 import HeroBanner from './Components/HeroBanner/HeroBanner';
@@ -11,6 +12,8 @@ function App() {
     <Hero/>
     <Exercises/>
     <HeroBanner/>
+    <BodyMass/>
+   
     </div>
   );
 }
