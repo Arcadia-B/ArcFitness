@@ -66,45 +66,49 @@ const BodyMass = () => {
     </div>
   
    
-    <div className="flex-1">
-      <h1 className="text-4xl font-bold text-center text-purple-500 mb-6">BMI Calculator</h1>
+    <div className="flex-1 flex flex-col justify-center items-center">
+  <h1 className="text-4xl font-bold text-center text-purple-500 mb-6">BMI Calculator</h1>
+
+  <div className="mb-4">
+    <label htmlFor="height" className="block text-2xl text-center font-semibold text-purple-500">Height (cm):</label>
+    <input
+      type="number"
+      id="height"
+      value={height}
+      onChange={(e) => setHeight(e.target.value)}
+      className="w-full p-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+      placeholder="Enter your height"
+    />
+  </div>
   
-      <div className="mb-4">
-        <label htmlFor="height" className="block text-2xl font-semibold text-purple-500">Height (cm):</label>
-        <input
-          type="number"
-          id="height"
-          value={height}
-          onChange={(e) => setHeight(e.target.value)}
-          className="w-2/3 p-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-          placeholder="Enter your height"
-        />
-      </div>
-      <div className="mb-4 ">
-        <label htmlFor="weight" className="block text-2xl font-semibold text-purple-500">Weight (kg):</label>
-        <input
-          type="number"
-          id="weight"
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-          className="w-2/3  p-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-          placeholder="Enter your weight"
-        />
-      </div>
-      <button
-        onClick={calcBmi}
-        className="w-2/3  text-2xl py-2 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-700 transition duration-300"
-      >
-        Calculate
-      </button>
-      {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
-      {bmi && (
-        <div className="mt-6 text-center">
-          <h2 className="text-2xl font-semibold text-purple-500">BMI: {bmi}</h2>
-          <p className={`text-2xl mt-2 ${getBmiStatus().color}`}>{getBmiStatus().text}</p>
-        </div>
-      )}
+  <div className="mb-4">
+    <label htmlFor="weight" className="block text-2xl text-center font-semibold text-purple-500">Weight (kg):</label>
+    <input
+      type="number"
+      id="weight"
+      value={weight}
+      onChange={(e) => setWeight(e.target.value)}
+      className="w-full p-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+      placeholder="Enter your weight"
+    />
+  </div>
+  
+  <button
+    onClick={calcBmi}
+    className="w-1/3 text-2xl py-2 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-700 transition duration-300"
+  >
+    Calculate
+  </button>
+  
+  {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
+  
+  {bmi && (
+    <div className="mt-6 text-center">
+      <h2 className="text-2xl font-semibold text-purple-500">BMI: {bmi}</h2>
+      <p className={`text-2xl mt-2 ${getBmiStatus().color}`}>{getBmiStatus().text}</p>
     </div>
+  )}
+</div>
   </div>
   
 
