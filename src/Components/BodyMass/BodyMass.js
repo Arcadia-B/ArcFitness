@@ -28,11 +28,49 @@ const BodyMass = () => {
     return { text: 'Obese', color: 'text-red-500' };
   };
   return (
-    <div className="mx-auto container bg-white p-8 rounded-lg w-full sm:w-96 shadow-lg">
+   
+    <div className="mx-auto container bg-white p-8 rounded-lg w-full sm:w-[90%] lg:w-[70%] shadow-lg flex gap-8">
+    <div className="flex-1">
+      <h1 className="text-4xl font-bold text-center text-purple-500 mb-4">BMI Categories</h1>
+      <table className="min-w-full table-auto">
+        <thead>
+          <tr className="bg-purple-100">
+            <th className="p-2 border-b text-2xl font-semibold text-purple-500">BMI Range</th>
+            <th className="p-2 border-b text-2xl font-semibold text-purple-500">Category</th>
+            <th className="p-2 border-b text-2xl font-semibold text-purple-500">Health Risk</th>
+          </tr>
+        </thead>
+        <tbody className='text-center'>
+          <tr className="hover:bg-gray-100 ">
+            <td className="p-2 border-b">Under 18.5</td>
+            <td className="p-2 border-b">Underweight</td>
+            <td className="p-2 border-b">Low</td>
+          </tr>
+          <tr className="hover:bg-gray-100">
+            <td className="p-2 border-b">18.5 - 24.9</td>
+            <td className="p-2 border-b">Normal weight</td>
+            <td className="p-2 border-b">Average</td>
+          </tr>
+          <tr className="hover:bg-gray-100">
+            <td className="p-2 border-b">25.0 - 29.9</td>
+            <td className="p-2 border-b">Overweight</td>
+            <td className="p-2 border-b">Moderate</td>
+          </tr>
+          <tr className="hover:bg-gray-100">
+            <td className="p-2 border-b">30.0 and above</td>
+            <td className="p-2 border-b">Obesity</td>
+            <td className="p-2 border-b">High</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+   
+    <div className="flex-1">
       <h1 className="text-4xl font-bold text-center text-purple-500 mb-6">BMI Calculator</h1>
-
+  
       <div className="mb-4">
-        <label htmlFor="height" className="block text-2xl font-semibold text-gray-700">Height (cm):</label>
+        <label htmlFor="height" className="block text-2xl font-semibold text-purple-500">Height (cm):</label>
         <input
           type="number"
           id="height"
@@ -43,7 +81,7 @@ const BodyMass = () => {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="weight" className="block text-2xl font-semibold text-gray-700">Weight (kg):</label>
+        <label htmlFor="weight" className="block text-2xl font-semibold text-purple-500">Weight (kg):</label>
         <input
           type="number"
           id="weight"
@@ -67,6 +105,10 @@ const BodyMass = () => {
         </div>
       )}
     </div>
+  </div>
+  
+
+  
   );
 };
 
