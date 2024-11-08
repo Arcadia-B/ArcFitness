@@ -76,24 +76,24 @@ const BodyMass = () => {
           id="height"
           value={height}
           onChange={(e) => setHeight(e.target.value)}
-          className="w-full p-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-2/3 p-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="Enter your height"
         />
       </div>
-      <div className="mb-4">
+      <div className="mb-4 ">
         <label htmlFor="weight" className="block text-2xl font-semibold text-purple-500">Weight (kg):</label>
         <input
           type="number"
           id="weight"
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
-          className="w-full p-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-2/3  p-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="Enter your weight"
         />
       </div>
       <button
         onClick={calcBmi}
-        className="w-full text-2xl py-2 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-700 transition duration-300"
+        className="w-2/3  text-2xl py-2 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-700 transition duration-300"
       >
         Calculate
       </button>
